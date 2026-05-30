@@ -6,63 +6,39 @@
 
 ```
 <style>
-
-    body{
+    body {
         font-family: Arial, sans-serif;
-        background:#0f172a;
-        color:white;
-        text-align:center;
-        padding:40px;
+        background: #0f172a;
+        color: white;
+        text-align: center;
+        padding: 40px;
     }
 
-    .card{
-        max-width:750px;
-        margin:auto;
-        background:#1e293b;
-        padding:30px;
-        border-radius:20px;
-        box-shadow:0 0 20px rgba(0,0,0,0.3);
+    .card {
+        max-width: 750px;
+        margin: auto;
+        background: #1e293b;
+        padding: 30px;
+        border-radius: 20px;
     }
 
-    h1{
-        margin-bottom:5px;
+    input {
+        margin: 20px;
     }
 
-    h3{
-        color:#cbd5e1;
-        margin-top:0;
+    button {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
     }
 
-    input{
-        margin:20px;
-        padding:10px;
+    .result {
+        margin-top: 20px;
+        background: #334155;
+        padding: 20px;
+        border-radius: 12px;
     }
-
-    button{
-        padding:12px 25px;
-        border:none;
-        border-radius:10px;
-        cursor:pointer;
-        font-size:16px;
-    }
-
-    button:hover{
-        opacity:0.9;
-    }
-
-    .result{
-        margin-top:25px;
-        background:#334155;
-        padding:20px;
-        border-radius:12px;
-    }
-
-    .footer{
-        margin-top:25px;
-        color:#94a3b8;
-        font-size:14px;
-    }
-
 </style>
 ```
 
@@ -77,26 +53,16 @@
 
 <h3>📸 Face Analysis System</h3>
 
-<p>
-    Upload a face image to estimate age and gender using AI.
-</p>
+<p>Upload a face image to estimate age and gender using AI.</p>
 
 <form method="POST" enctype="multipart/form-data">
-
     <input type="file" name="photo" required>
-
     <br>
-
-    <button type="submit">
-        Predict
-    </button>
-
+    <button type="submit">Predict</button>
 </form>
 
 {% if result %}
-
 <div class="result">
-
     <h2>🤖 AI Prediction Result</h2>
 
     <p>
@@ -108,142 +74,13 @@
         <strong>🚻 Predicted Gender:</strong>
         {{ result.gender }}
     </p>
-
 </div>
-
 {% endif %}
-
-<div class="footer">
-    VisionPulse AI | School AI Project 2026
-</div>
 ```
 
 </div>
 
 </body>
 </html>
-<!DOCTYPE html>
 
-<html>
-<head>
-    <title>VisionPulse AI</title>
-
-```
-<style>
-
-    body{
-        font-family: Arial, sans-serif;
-        background:#0f172a;
-        color:white;
-        text-align:center;
-        padding:40px;
-    }
-
-    .card{
-        max-width:750px;
-        margin:auto;
-        background:#1e293b;
-        padding:30px;
-        border-radius:20px;
-        box-shadow:0 0 20px rgba(0,0,0,0.3);
-    }
-
-    h1{
-        margin-bottom:5px;
-    }
-
-    h3{
-        color:#cbd5e1;
-        margin-top:0;
-    }
-
-    input{
-        margin:20px;
-        padding:10px;
-    }
-
-    button{
-        padding:12px 25px;
-        border:none;
-        border-radius:10px;
-        cursor:pointer;
-        font-size:16px;
-    }
-
-    button:hover{
-        opacity:0.9;
-    }
-
-    .result{
-        margin-top:25px;
-        background:#334155;
-        padding:20px;
-        border-radius:12px;
-    }
-
-    .footer{
-        margin-top:25px;
-        color:#94a3b8;
-        font-size:14px;
-    }
-
-</style>
-```
-
-</head>
-
-<body>
-
-<div class="card">
-
-```
-<h1>🤖 VisionPulse AI</h1>
-
-<h3>📸 Face Analysis System</h3>
-
-<p>
-    Upload a face image to estimate age and gender using AI.
-</p>
-
-<form method="POST" enctype="multipart/form-data">
-
-    <input type="file" name="photo" required>
-
-    <br>
-
-    <button type="submit">
-        Predict
-    </button>
-
-</form>
-
-{% if result %}
-
-<div class="result">
-
-    <h2>🤖 AI Prediction Result</h2>
-
-    <p>
-        <strong>🎂 Estimated Age:</strong>
-        {{ result.age }}
-    </p>
-
-    <p>
-        <strong>🚻 Predicted Gender:</strong>
-        {{ result.gender }}
-    </p>
-
-</div>
-
-{% endif %}
-
-<div class="footer">
-    VisionPulse AI | School AI Project 2026
-</div>
-```
-
-</div>
-
-</body>
-</html>
 

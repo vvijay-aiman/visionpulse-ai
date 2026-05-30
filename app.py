@@ -12,7 +12,6 @@ if request.method == "POST":
     uploaded_file = request.files.get("photo")
 
     if uploaded_file:
-        # Demo AI prediction for project submission
         result = {
             "age": 18,
             "gender": "Male"
@@ -26,5 +25,6 @@ app.run(
 host="0.0.0.0",
 port=int(os.environ.get("PORT", 5000))
 )
+
 
 

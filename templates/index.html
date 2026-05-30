@@ -3,15 +3,76 @@
 <head>
     <title>VisionPulse AI</title>
     <style>
-        body{font-family:Arial;background:#0f172a;color:white;text-align:center;padding:40px}
-        .card{max-width:700px;margin:auto;background:#1e293b;padding:20px;border-radius:15px}
+        body{
+            font-family:Arial;
+            background:#0f172a;
+            color:white;
+            text-align:center;
+            padding:40px;
+        }
+
+        .card{
+            max-width:700px;
+            margin:auto;
+            background:#1e293b;
+            padding:30px;
+            border-radius:20px;
+        }
+
+        input{
+            margin:20px;
+        }
+
+        button{
+            padding:10px 20px;
+            border:none;
+            border-radius:10px;
+            cursor:pointer;
+        }
+
+        .result{
+            margin-top:20px;
+            background:#334155;
+            padding:20px;
+            border-radius:10px;
+        }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>🤖 VisionPulse AI</h1>
-        <p>Face Detection + Age Prediction + Gender Prediction Project</p>
-        <p>This is the starter Flask website.</p>
-    </div>
+
+<div class="card">
+
+<h1>🤖 VisionPulse AI</h1>
+
+<p>Upload a photo and get AI predictions.</p>
+
+<form method="POST" enctype="multipart/form-data">
+
+<input type="file" name="photo" required>
+
+<br>
+
+<button type="submit">
+Predict
+</button>
+
+</form>
+
+{% if result %}
+
+<div class="result">
+
+<h2>Prediction Result</h2>
+
+<p>🎂 Age: {{ result.age }}</p>
+
+<p>🚹 Gender: {{ result.gender }}</p>
+
+</div>
+
+{% endif %}
+
+</div>
+
 </body>
 </html>

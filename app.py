@@ -1,26 +1,30 @@
 from flask import Flask, render_template, request
+import os
 
-app = Flask(__name__)
+app = Flask(**name**)
 
 @app.route("/", methods=["GET", "POST"])
 def home():
-    result = None
+result = None
 
-    if request.method == "POST":
-        uploaded_file = request.files.get("photo")
+```
+if request.method == "POST":
+    uploaded_file = request.files.get("photo")
 
-        if uploaded_file:
-            # Placeholder AI result
-            result = {
-                "age": 18,
-                "gender": "Male"
-            }
+    if uploaded_file:
+        # Demo AI prediction for project submission
+        result = {
+            "age": 18,
+            "gender": "Male"
+        }
 
-    return render_template("index.html", result=result)
+return render_template("index.html", result=result)
+```
 
-if __name__ == "__main__":
-    import os
-    app.run(
-        host="0.0.0.0",
-        port=int(os.environ.get("PORT", 5000))
-    )
+if **name** == "**main**":
+app.run(
+host="0.0.0.0",
+port=int(os.environ.get("PORT", 5000))
+)
+
+
